@@ -31,7 +31,17 @@ document.addEventListener('DOMContentLoaded', function(){
 
     boxes.forEach(function(box, index){
         box.classList.add('square'); // layout
-        box.addEventListener("click", function(e){
+
+        box.addEventListener("mouseover", () => { //hover in event
+            box.style.cursor = "pointer";
+            box.classList.add("hover");
+        })
+
+        box.addEventListener("mouseout",()=>{ //houver out event
+            box.classList.remove("hover");
+        });
+
+        box.addEventListener("click", function(e){ //click event
 
             if (player == "X"){
                 box.classList.add("X")
@@ -48,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
             switch_player()
             status.innerHTML= `${player}'s turn`
-
 
             
             
