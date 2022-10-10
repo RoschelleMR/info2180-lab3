@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function(){
         
         box.addEventListener("click", function(e){ //click event
 
-            if (gameState == true){
+            if (gameState == true && box.innerHTML==""){
 
                 if (player == "X"){
                     box.classList.add("X")
